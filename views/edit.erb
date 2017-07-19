@@ -1,6 +1,6 @@
 <h4>Please make any necessary changes and press submit</h4>
 
-<form action="/hogwarts" method = "post">
+<form action="/hogwarts/<%= @student.id %>" method = "post">
   <label for="first-name">First_name:</label>
   <input type="text" id = first-name name = first_name value = <%= @student.first_name %> > 
 

@@ -55,4 +55,12 @@ class Student
   sql = "DELETE FROM students WHERE id = #{@id};"
   SqlRunner.run(sql)
   end
+
+  def update()
+    sql = "UPDATE students SET first_name = '#{@first_name}', 
+    last_name = '#{@last_name}', 
+    house = '#{@house}', 
+    age = '#{@age}'' WHERE id = '#{@id}';"
+  SqlRunner.run(sql)
+  end
 end

@@ -52,6 +52,13 @@ get '/hogwarts/:id/edit' do
   erb(:edit)
 end
 
+#update item
+post '/hogwarts/:id' do
+   student = Student.new(Student.find(params[:id]))
+   student.update()
+   redirect to '/hogwarts'
+end
+
 # new houses
 get '/hogwarts/houses/new' do
   erb(:new_houses)
