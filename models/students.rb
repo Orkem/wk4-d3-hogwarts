@@ -29,6 +29,12 @@ class Student
     return result.first
   end
 
+  def find_house()
+    sql = "SELECT houses.name FROM students INNER JOIN houses on #{@house} = houses.id WHERE students.id = #{@id} "
+    find = SqlRunner.run(sql)
+    return find.first['name']
+  end
+
     #Find all students
 
   def self.all()
