@@ -11,10 +11,13 @@
 
 <label for="house">House</label>
 <select name="house" id="house">
-  <option value="Gryffindor">Gryfindor</option>
-  <option value="Slytherin">Slytherin</option>
+
+<% @houses.each do |house| %>
+  <option value="<% house.name %>"><%= house.name %></option>
+<!--   <option value="Slytherin">Slytherin</option>
   <option value="Hufflepuff">Hufflepuff</option>
-  <option value="Ravenclaw">Ravenclaw</option>
+  <option value="Ravenclaw">Ravenclaw</option> -->
+  <% end %>
 </select>
 
 <input type="submit" value = "Submit New Student">
