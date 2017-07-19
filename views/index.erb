@@ -1,4 +1,10 @@
+
 <% @students.each do |student|%>
+<div class = "person">
     <p>Name: <%= student.first_name %> <%= student.last_name %></p>
-    <p>House: <%= student.house %> Age: <%= student.age %></p><hr>
+    <p>House: <%= student.find_house %> Age: <%= student.age %></p>
+    <a href="/hogwarts/<%= student.id %>"> Show Student</a>
+</div>
+    <hr>
 <% end %>
+

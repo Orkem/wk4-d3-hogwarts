@@ -11,7 +11,7 @@ class Student
     @id= params['id'].to_i if params['id']
     @first_name = params['first_name']
     @last_name = params['last_name']
-    @house = params['house']
+    @house = params['house'].to_i
     @age = params['age'].to_i
   end
 
@@ -22,8 +22,8 @@ class Student
   end
 
   # Find by id
-  def find()
-    sql = "SELECT * FROM students WHERE id = #{@id};"
+  def self.find(id)
+    sql = "SELECT * FROM students WHERE id = #{id};"
     # binding.pry
     result = SqlRunner.run(sql)
     return result.first
@@ -49,7 +49,10 @@ class Student
   def self.delete_all
     sql = "DELETE FROM students"
     SqlRunner.run(sql)
-    
   end
 
+  def delete()
+  sql = "DELETE FROM students WHERE id = #{@id};"
+  SqlRunner.run(sql)
+  end
 end

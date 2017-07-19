@@ -2,13 +2,19 @@
 <html lang = 'en-GB'>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <link rel="stylesheet" href="../../styles.css" type = "text/css">
+  <title>Hogwarts Enrolment</title>
 </head>
 <body>
-<h1>Welcome to Hogwarts</h1>
+<header>
+<!-- <h1>Welcome to Hogwarts</h1> -->
+<img src="../../hogwarts_crest.jpg" alt="Hogwarts badge">
+</header>
 <nav>
 <a href="/hogwarts">Home</a>
 <a href="/hogwarts/new">Enrol New Student</a>
+<a href="/hogwarts/houses">Houses</a>
+<a href="/hogwarts/houses/new">Create House</a>
 </nav>
 <%= yield %>
 </body>

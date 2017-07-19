@@ -1,0 +1,6 @@
+<h2>The <%= @houses.length %> School Houses are</h2>
+<div class=crests>
+<% @houses.each do |house|  %>
+<p><%= house.name %></p><img src="<%= house.logo %>" alt="<%= house.name %> logo">
+<% end %>
+</div>

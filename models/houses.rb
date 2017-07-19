@@ -17,7 +17,7 @@ class House
       @id = save.first['id'].to_i
     end
 
-    def find()
+    def self.find()
       sql = "SELECT * FROM houses WHERE id = #{@id}"
       find = SqlRunner.run(sql)
       result = find.first
